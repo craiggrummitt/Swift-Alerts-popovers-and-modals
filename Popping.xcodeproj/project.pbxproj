@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CE66D5A219C6860100CAE2F7 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D5A119C6860100CAE2F7 /* PushViewController.swift */; };
-		CE66D5A819C7320700CAE2F7 /* WYPopoverController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66D5A519C7320700CAE2F7 /* WYPopoverController.m */; };
-		CE66D5A919C7320700CAE2F7 /* WYStoryboardPopoverSegue.m in Sources */ = {isa = PBXBuildFile; fileRef = CE66D5A719C7320700CAE2F7 /* WYStoryboardPopoverSegue.m */; };
 		CE7F1C6E19C77860002296C7 /* PopperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F1C6D19C77860002296C7 /* PopperViewController.swift */; };
 		CEF496EE19C669F2004E2EB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF496ED19C669F2004E2EB5 /* AppDelegate.swift */; };
 		CEF496F019C669F2004E2EB5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF496EF19C669F2004E2EB5 /* FirstViewController.swift */; };
@@ -34,10 +32,6 @@
 
 /* Begin PBXFileReference section */
 		CE66D5A119C6860100CAE2F7 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
-		CE66D5A419C7320700CAE2F7 /* WYPopoverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYPopoverController.h; sourceTree = "<group>"; };
-		CE66D5A519C7320700CAE2F7 /* WYPopoverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYPopoverController.m; sourceTree = "<group>"; };
-		CE66D5A619C7320700CAE2F7 /* WYStoryboardPopoverSegue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WYStoryboardPopoverSegue.h; sourceTree = "<group>"; };
-		CE66D5A719C7320700CAE2F7 /* WYStoryboardPopoverSegue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WYStoryboardPopoverSegue.m; sourceTree = "<group>"; };
 		CE7F1C6D19C77860002296C7 /* PopperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopperViewController.swift; sourceTree = "<group>"; };
 		CEF496E819C669F2004E2EB5 /* Popping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF496EC19C669F2004E2EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -72,21 +66,9 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		CE66D5A319C7320700CAE2F7 /* WYPopoverController */ = {
-			isa = PBXGroup;
-			children = (
-				CE66D5A419C7320700CAE2F7 /* WYPopoverController.h */,
-				CE66D5A519C7320700CAE2F7 /* WYPopoverController.m */,
-				CE66D5A619C7320700CAE2F7 /* WYStoryboardPopoverSegue.h */,
-				CE66D5A719C7320700CAE2F7 /* WYStoryboardPopoverSegue.m */,
-			);
-			path = WYPopoverController;
-			sourceTree = "<group>";
-		};
 		CEF496DF19C669F2004E2EB5 = {
 			isa = PBXGroup;
 			children = (
-				CE66D5A319C7320700CAE2F7 /* WYPopoverController */,
 				CEF496EA19C669F2004E2EB5 /* Popping */,
 				CEF4970219C669F2004E2EB5 /* PoppingTests */,
 				CEF496E919C669F2004E2EB5 /* Products */,
@@ -248,9 +230,7 @@
 				CE7F1C6E19C77860002296C7 /* PopperViewController.swift in Sources */,
 				CEF496F219C669F2004E2EB5 /* SecondViewController.swift in Sources */,
 				CEF496EE19C669F2004E2EB5 /* AppDelegate.swift in Sources */,
-				CE66D5A919C7320700CAE2F7 /* WYStoryboardPopoverSegue.m in Sources */,
 				CE66D5A219C6860100CAE2F7 /* PushViewController.swift in Sources */,
-				CE66D5A819C7320700CAE2F7 /* WYPopoverController.m in Sources */,
 				CEF4971219C66FCD004E2EB5 /* PopViewController.swift in Sources */,
 				CEF4971019C66C05004E2EB5 /* TransitionPicker.swift in Sources */,
 				CEF496F019C669F2004E2EB5 /* FirstViewController.swift in Sources */,
