@@ -23,7 +23,7 @@ class PopperViewController: UIViewController, PopViewControllerDelegate {
     @IBAction func goPopover(sender: AnyObject) {
         
          let sb = UIStoryboard(name: "Main", bundle: nil)
-        let popoverViewController = (sb.instantiateViewControllerWithIdentifier("popper")! as PopViewController)
+        let popoverViewController = (sb.instantiateViewControllerWithIdentifier("popper") as! PopViewController)
         popoverViewController.delegate = self
         
         popover=UIPopoverController(contentViewController: popoverViewController)

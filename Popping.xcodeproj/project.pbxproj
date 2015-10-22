@@ -7,11 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B90273801BD93A0100586578 /* PresentModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B902737F1BD93A0100586578 /* PresentModalViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		CE66D5A219C6860100CAE2F7 /* PushViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE66D5A119C6860100CAE2F7 /* PushViewController.swift */; };
 		CE7F1C6E19C77860002296C7 /* PopperViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE7F1C6D19C77860002296C7 /* PopperViewController.swift */; };
 		CEF496EE19C669F2004E2EB5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF496ED19C669F2004E2EB5 /* AppDelegate.swift */; };
 		CEF496F019C669F2004E2EB5 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF496EF19C669F2004E2EB5 /* FirstViewController.swift */; };
-		CEF496F219C669F2004E2EB5 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF496F119C669F2004E2EB5 /* SecondViewController.swift */; };
 		CEF496F519C669F2004E2EB5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF496F319C669F2004E2EB5 /* Main.storyboard */; };
 		CEF496F719C669F2004E2EB5 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF496F619C669F2004E2EB5 /* Images.xcassets */; };
 		CEF496FA19C669F2004E2EB5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF496F819C669F2004E2EB5 /* LaunchScreen.xib */; };
@@ -31,13 +31,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B902737F1BD93A0100586578 /* PresentModalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PresentModalViewController.swift; sourceTree = "<group>"; };
 		CE66D5A119C6860100CAE2F7 /* PushViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PushViewController.swift; sourceTree = "<group>"; };
 		CE7F1C6D19C77860002296C7 /* PopperViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopperViewController.swift; sourceTree = "<group>"; };
 		CEF496E819C669F2004E2EB5 /* Popping.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Popping.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF496EC19C669F2004E2EB5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CEF496ED19C669F2004E2EB5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF496EF19C669F2004E2EB5 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		CEF496F119C669F2004E2EB5 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		CEF496F419C669F2004E2EB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CEF496F619C669F2004E2EB5 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		CEF496F919C669F2004E2EB5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -89,7 +89,6 @@
 			children = (
 				CEF496ED19C669F2004E2EB5 /* AppDelegate.swift */,
 				CEF496EF19C669F2004E2EB5 /* FirstViewController.swift */,
-				CEF496F119C669F2004E2EB5 /* SecondViewController.swift */,
 				CEF496F319C669F2004E2EB5 /* Main.storyboard */,
 				CEF496F619C669F2004E2EB5 /* Images.xcassets */,
 				CEF496F819C669F2004E2EB5 /* LaunchScreen.xib */,
@@ -98,6 +97,7 @@
 				CEF4971119C66FCD004E2EB5 /* PopViewController.swift */,
 				CE66D5A119C6860100CAE2F7 /* PushViewController.swift */,
 				CE7F1C6D19C77860002296C7 /* PopperViewController.swift */,
+				B902737F1BD93A0100586578 /* PresentModalViewController.swift */,
 			);
 			path = Popping;
 			sourceTree = "<group>";
@@ -171,7 +171,9 @@
 		CEF496E019C669F2004E2EB5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = CraigGrummitt;
 				TargetAttributes = {
 					CEF496E719C669F2004E2EB5 = {
@@ -227,8 +229,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B90273801BD93A0100586578 /* PresentModalViewController.swift in Sources */,
 				CE7F1C6E19C77860002296C7 /* PopperViewController.swift in Sources */,
-				CEF496F219C669F2004E2EB5 /* SecondViewController.swift in Sources */,
 				CEF496EE19C669F2004E2EB5 /* AppDelegate.swift in Sources */,
 				CE66D5A219C6860100CAE2F7 /* PushViewController.swift in Sources */,
 				CEF4971219C66FCD004E2EB5 /* PopViewController.swift in Sources */,
@@ -295,6 +297,7 @@
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -362,6 +365,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Popping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -372,6 +376,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = Popping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -390,6 +395,7 @@
 				);
 				INFOPLIST_FILE = PoppingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popping.app/Popping";
 			};
@@ -405,6 +411,7 @@
 				);
 				INFOPLIST_FILE = PoppingTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Popping.app/Popping";
 			};

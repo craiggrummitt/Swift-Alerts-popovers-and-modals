@@ -28,20 +28,20 @@ class PushViewController: UIViewController,UIPickerViewDataSource, UIPickerViewD
     func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerTransitionArray.count
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return(pickerTransitionArray[row])
     }
     
     //MARK: IBActions
     @IBAction func clickPushButton(sender: AnyObject) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        pusherViewController = (sb.instantiateViewControllerWithIdentifier("pusher")! as UIViewController)
+        pusherViewController = (sb.instantiateViewControllerWithIdentifier("pusher") as UIViewController)
         self.navigationController?.pushViewController(pusherViewController!, animated: true)
     }
     @IBAction func clickPushChangeAnimation(sender: AnyObject) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        pusherViewController = (sb.instantiateViewControllerWithIdentifier("pusher")! as UIViewController)
+        pusherViewController = (sb.instantiateViewControllerWithIdentifier("pusher") as UIViewController)
         
         var trans:UIViewAnimationTransition
         switch transitionPicker.selectedRowInComponent(0) {
@@ -57,7 +57,7 @@ class PushViewController: UIViewController,UIPickerViewDataSource, UIPickerViewD
             trans = .None
         }
 
-        var navigationController = UINavigationController()
+//        var navigationController = UINavigationController()
         UIView.animateWithDuration(0.75, animations: {
             UIView.setAnimationCurve(.EaseInOut)
             self.navigationController?.pushViewController(self.pusherViewController!, animated: false)

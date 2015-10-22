@@ -15,7 +15,7 @@ class FirstViewController: UIViewController {
     @IBAction func clickAlertButton(sender: AnyObject) {
         var style:UIAlertControllerStyle
         var styleName:String
-        if (sender as NSObject == alertButton) {
+        if (sender as! NSObject == alertButton) {
             style = .Alert
             styleName = "Alert"
         } else {
@@ -28,7 +28,7 @@ class FirstViewController: UIViewController {
 
         let callAction = UIAlertAction(title: "OK", style: .Default, handler: {
                 action in
-                println("hit alert")
+                print("hit alert")
             }
         )
         alertController.addAction(callAction)

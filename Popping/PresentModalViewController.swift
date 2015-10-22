@@ -1,24 +1,23 @@
 //
-//  SecondViewController.swift
+//  PresentModalViewController.swift
 //  Popping
 //
-//  Created by CraigGrummitt on 14/09/2014.
-//  Copyright (c) 2014 CraigGrummitt. All rights reserved.
+//  Created by Craig Grummitt on 22/10/2015.
+//  Copyright © 2015 CraigGrummitt. All rights reserved.
 //
 
 import UIKit
 
-class SecondViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate, PopViewControllerDelegate {
+class PresentModalViewController: UIViewController,UIPickerViewDataSource, UIPickerViewDelegate, PopViewControllerDelegate {
 
     @IBOutlet weak var transitionPicker: UIPickerView!
     @IBOutlet weak var presentationPicker: UIPickerView!
-    @IBOutlet weak var presentButton: UIButton!
-    @IBOutlet weak var xSlider: UISlider!
-    @IBOutlet weak var ySlider: UISlider!
-    
     
     let pickerTransitionArray = ["CoverVertical","FlipHorizontal","CrossDissolve","PartialCurl"]
     let pickerPresentationArray = ["FullScreen","PageSheet","FormSheet","CurrentContext","Custom","OverFullScreen","OverCurrentContext","Popover"]
+    @IBOutlet weak var presentButton: UIButton!
+    @IBOutlet weak var xSlider: UISlider!
+    @IBOutlet weak var ySlider: UISlider!
     
     var popupViewController:PopViewController?
     
@@ -40,7 +39,7 @@ class SecondViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
             return pickerPresentationArray.count //UIModalPresentationStyle
         }
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String! {
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView == transitionPicker) {
             return(pickerTransitionArray[row])
         } else {
@@ -51,11 +50,11 @@ class SecondViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
     
     @IBAction func clickPresent(sender: AnyObject) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        popupViewController = (sb.instantiateViewControllerWithIdentifier("popper")! as PopViewController)
+        popupViewController = (sb.instantiateViewControllerWithIdentifier("popper") as! PopViewController)
         popupViewController!.delegate = self
         
         //you'd think there'd be an easier way to hook up an enum to a picker...
-
+        
         var trans:UIModalTransitionStyle
         switch transitionPicker.selectedRowInComponent(0) {
         case 0:
@@ -99,7 +98,7 @@ class SecondViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
             let alertController = UIAlertController(title: "Ooops!", message: "Sorry, that combination is not available!", preferredStyle:.Alert )
             let callAction = UIAlertAction(title: "OK", style: .Default, handler: {
                 action in
-                println("hit alert")
+                print("hit alert")
             })
             alertController.addAction(callAction)
             presentViewController(alertController, animated: true, completion: nil)
@@ -109,7 +108,7 @@ class SecondViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
         popupViewController!.preferredContentSize = CGSize(width:self.view.frame.width * CGFloat(xSlider.value / 100.0), height:self.view.frame.height * CGFloat(ySlider.value / 100.0))
         popupViewController!.popoverPresentationController?.sourceView = self.presentButton.imageView
         popupViewController!.popoverPresentationController?.sourceRect = self.presentButton.bounds
-    
+        
         self.presentViewController(popupViewController!, animated: true, completion: {})
     }
     
@@ -119,8 +118,4 @@ class SecondViewController: UIViewController,UIPickerViewDataSource, UIPickerVie
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
-    }
-
-
-}
-
+    }}
