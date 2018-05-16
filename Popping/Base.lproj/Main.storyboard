@@ -1,9 +1,13 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Alerts-->
@@ -15,38 +19,29 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BAp-8y-ijo">
-                                <rect key="frame" x="256" y="66" width="88" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="88" id="f4G-zC-oLj"/>
-                                </constraints>
+                                <rect key="frame" x="143.5" y="66" width="88" height="30"/>
                                 <state key="normal" title="Action Sheet">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="clickAlertButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Aks-Hl-lRo"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-Ty-dnu">
-                                <rect key="frame" x="277" y="28" width="46" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="EJn-Ld-uAi"/>
-                                </constraints>
+                                <rect key="frame" x="171" y="28" width="33" height="30"/>
                                 <state key="normal" title="Alert">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="clickAlertButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hWF-KG-bbU"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Zbv-Ty-dnu" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="8" id="29A-SM-Tqj"/>
                             <constraint firstAttribute="centerX" secondItem="BAp-8y-ijo" secondAttribute="centerX" id="5Ns-ic-4Yl"/>
@@ -73,41 +68,32 @@
                         <viewControllerLayoutGuide type="bottom" id="8f7-bD-dHR"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="7zz-fz-E8e">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lbr-Dg-pIF">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="216"/>
-                                <animations/>
+                                <rect key="frame" x="-4" y="20" width="383" height="216"/>
                             </pickerView>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xe3-4K-fv6">
-                                <rect key="frame" x="0.0" y="166" width="600" height="216"/>
-                                <animations/>
+                                <rect key="frame" x="-4" y="186" width="383" height="216"/>
                             </pickerView>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="D7O-mT-M4t">
-                                <rect key="frame" x="18" y="352" width="564" height="31"/>
-                                <animations/>
+                                <rect key="frame" x="14" y="372" width="347" height="31"/>
                             </slider>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="50" minValue="0.0" maxValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="imr-WA-Cqw">
-                                <rect key="frame" x="18" y="390" width="564" height="31"/>
-                                <animations/>
+                                <rect key="frame" x="14" y="410" width="347" height="31"/>
                             </slider>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KMf-YL-2p8">
-                                <rect key="frame" x="240" y="428" width="120" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="120" id="LtS-G0-fdf"/>
-                                </constraints>
+                                <rect key="frame" x="132.5" y="448" width="110" height="30"/>
                                 <state key="normal" title="Present (Modal)">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="clickPresent:" destination="S7x-wV-0k0" eventType="touchUpInside" id="OcJ-Ia-B2g"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="Xe3-4K-fv6" firstAttribute="leading" secondItem="7zz-fz-E8e" secondAttribute="leadingMargin" constant="-20" id="Gxb-Jd-MKn"/>
                             <constraint firstItem="D7O-mT-M4t" firstAttribute="leading" secondItem="7zz-fz-E8e" secondAttribute="leadingMargin" id="JbF-nx-wfx"/>
@@ -137,7 +123,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSG-Qa-5sx" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1509" y="10"/>
+            <point key="canvasLocation" x="1508" y="9.4452773613193415"/>
         </scene>
         <!--Push View Controller-->
         <scene sceneID="hGt-FN-RoY">
@@ -148,43 +134,36 @@
                         <viewControllerLayoutGuide type="bottom" id="Nvs-x7-9pc"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="hN5-ug-8Dq">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u9C-VI-fIl">
-                                <rect key="frame" x="277" y="285" width="46" height="30"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="46" id="kb5-jL-OgD"/>
-                                </constraints>
+                                <rect key="frame" x="170" y="318.5" width="35" height="30"/>
                                 <state key="normal" title="Push">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="clickPushButton:" destination="f2t-6E-Nql" eventType="touchUpInside" id="I8h-8X-OUX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-bk-o4v">
-                                <rect key="frame" x="220.5" y="323" width="160" height="30"/>
-                                <animations/>
+                                <rect key="frame" x="107.5" y="356.5" width="160" height="30"/>
                                 <state key="normal" title="Push change animation">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="clickPushChangeAnimation:" destination="f2t-6E-Nql" eventType="touchUpInside" id="icj-cP-KbQ"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxI-Ze-VwG">
-                                <rect key="frame" x="0.0" y="64" width="600" height="216"/>
-                                <animations/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="216"/>
                                 <connections>
                                     <outlet property="dataSource" destination="f2t-6E-Nql" id="wIH-8T-C0Z"/>
                                     <outlet property="delegate" destination="f2t-6E-Nql" id="Ld6-4v-oxJ"/>
                                 </connections>
                             </pickerView>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="KxI-Ze-VwG" secondAttribute="trailing" id="84a-XI-nKn"/>
                             <constraint firstAttribute="centerY" secondItem="u9C-VI-fIl" secondAttribute="centerY" id="8b9-oT-2NF"/>
@@ -213,8 +192,7 @@
                     <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -236,29 +214,26 @@
                         <viewControllerLayoutGuide type="bottom" id="PPY-DZ-nQX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="13m-kX-pZb">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-eh-ucT">
-                                <rect key="frame" x="280.5" y="318" width="39" height="30"/>
-                                <animations/>
+                                <rect key="frame" x="168" y="352.5" width="39" height="30"/>
                                 <state key="normal" title="Close">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="clickCloseButton:" destination="3LB-8C-kxh" eventType="touchUpInside" id="hTu-K7-iHr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here goes content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oas-10-u1w">
-                                <rect key="frame" x="229" y="289" width="142" height="20.5"/>
-                                <animations/>
+                                <rect key="frame" x="116.5" y="323.5" width="142" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="0.74036175270000004" green="0.65385451400000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.74036175270000004" green="0.65385451400000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="oas-10-u1w" secondAttribute="centerY" id="0RF-52-ZgM"/>
                             <constraint firstItem="dBQ-eh-ucT" firstAttribute="top" secondItem="oas-10-u1w" secondAttribute="bottom" constant="8" id="Gn8-Mk-fBi"/>
@@ -269,7 +244,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="37D-b6-ZhJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-211" y="969"/>
+            <point key="canvasLocation" x="-228" y="870"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="e7k-AG-dtp">
@@ -280,19 +255,17 @@
                         <viewControllerLayoutGuide type="bottom" id="tIi-v8-zU5"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="pP6-NW-Tj8">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here goes content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9AG-zI-8k9">
-                                <rect key="frame" x="229" y="289" width="142" height="21"/>
-                                <animations/>
+                                <rect key="frame" x="116.5" y="323" width="142" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="1" green="0.43529412150000002" blue="0.81176471709999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="9AG-zI-8k9" secondAttribute="centerX" id="2ii-3O-Byg"/>
                             <constraint firstAttribute="centerY" secondItem="9AG-zI-8k9" secondAttribute="centerY" id="BWK-YG-211"/>
@@ -310,9 +283,8 @@
                     <tabBarItem key="tabBarItem" title="Push" image="first" id="8Fs-bz-KHE"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Wmn-Lh-uX5">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -332,26 +304,23 @@
                         <viewControllerLayoutGuide type="bottom" id="cTt-so-bvE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="01i-Xw-5bH">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="81e-2S-q2b">
-                                <rect key="frame" x="152" y="20" width="297" height="30"/>
-                                <animations/>
+                                <rect key="frame" x="40" y="20" width="295" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="297" id="IwY-aY-9Nb"/>
                                     <constraint firstAttribute="height" constant="30" id="lFb-Fb-gnt"/>
                                 </constraints>
                                 <state key="normal" title="UIPopover (warning: won't work on iPhone)">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="goPopover:" destination="BBf-ft-0Vp" eventType="touchUpInside" id="CKV-S3-D8T"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="81e-2S-q2b" firstAttribute="top" secondItem="TNz-aM-A0P" secondAttribute="bottom" id="K7P-f2-zeP"/>
                             <constraint firstAttribute="centerX" secondItem="81e-2S-q2b" secondAttribute="centerX" id="pzz-RZ-OyH"/>
