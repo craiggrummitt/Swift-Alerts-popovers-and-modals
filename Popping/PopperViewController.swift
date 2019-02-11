@@ -20,19 +20,20 @@ class PopperViewController: UIViewController, PopViewControllerDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    @IBAction func goPopover(sender: AnyObject) {
+    
+    @IBAction func goPopover(sender: UIButton) {
         
-         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let popoverViewController = (sb.instantiateViewControllerWithIdentifier("popper") as! PopViewController)
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let popoverViewController = (sb.instantiateViewController(withIdentifier: "popper") as! PopViewController)
         popoverViewController.delegate = self
         
         popover=UIPopoverController(contentViewController: popoverViewController)
 
-        popover!.presentPopoverFromRect(sender.frame, inView: self.view, permittedArrowDirections: .Any, animated: true)
+        popover!.present(from: sender.frame, in: self.view, permittedArrowDirections: .any, animated: true)
     }
     
     func closePop(sender:AnyObject) {
-        popover!.dismissPopoverAnimated(true)
+        popover!.dismiss(animated: true)
     }
     /*
     // MARK: - Navigation

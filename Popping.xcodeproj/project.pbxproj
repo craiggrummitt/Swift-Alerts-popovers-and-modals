@@ -178,6 +178,7 @@
 				TargetAttributes = {
 					CEF496E719C669F2004E2EB5 = {
 						CreatedOnToolsVersion = 6.0;
+						DevelopmentTeam = 5M6U4VTSB8;
 					};
 					CEF496FE19C669F2004E2EB5 = {
 						CreatedOnToolsVersion = 6.0;
@@ -386,10 +387,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5M6U4VTSB8;
 				INFOPLIST_FILE = Popping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
 		};
@@ -397,10 +400,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5M6U4VTSB8;
 				INFOPLIST_FILE = Popping/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.interactivecoconut.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
 		};

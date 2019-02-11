@@ -22,46 +22,46 @@ class PushViewController: UIViewController,UIPickerViewDataSource, UIPickerViewD
         // Do any additional setup after loading the view.
     }
     //MARK: pickerViewDelegate
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
-        return pickerTransitionArray.count
-    }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return(pickerTransitionArray[row])
+    }
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerTransitionArray.count
     }
     
     //MARK: IBActions
-    @IBAction func clickPushButton(sender: AnyObject) {
+    @IBAction func clickPushButton(sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        pusherViewController = (sb.instantiateViewControllerWithIdentifier("pusher") as UIViewController)
+        pusherViewController = (sb.instantiateViewController(withIdentifier: "pusher") as UIViewController)
         self.navigationController?.pushViewController(pusherViewController!, animated: true)
     }
-    @IBAction func clickPushChangeAnimation(sender: AnyObject) {
+    @IBAction func clickPushChangeAnimation(sender: UIButton) {
         
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        pusherViewController = (sb.instantiateViewControllerWithIdentifier("pusher") as UIViewController)
+        pusherViewController = (sb.instantiateViewController(withIdentifier: "pusher") as UIViewController)
         
-        var trans:UIViewAnimationTransition
-        switch transitionPicker.selectedRowInComponent(0) {
+        var trans:UIView.AnimationTransition
+        switch transitionPicker.selectedRow(inComponent: 0) {
         case 0:
-            trans = .CurlDown
+            trans = .curlDown
         case 1:
-            trans = .CurlUp
+            trans = .curlUp
         case 2:
-            trans = .FlipFromLeft
+            trans = .flipFromLeft
         case 3:
-            trans = .FlipFromRight
+            trans = .flipFromRight
         default:
-            trans = .None
+            trans = .none
         }
 
 //        var navigationController = UINavigationController()
-        UIView.animateWithDuration(0.75, animations: {
-            UIView.setAnimationCurve(.EaseInOut)
+        UIView.animate(withDuration: 0.75, animations: {
+            UIView.setAnimationCurve(.easeInOut)
             self.navigationController?.pushViewController(self.pusherViewController!, animated: false)
-            UIView.setAnimationTransition(trans, forView: self.navigationController!.view, cache: false)
+            UIView.setAnimationTransition(trans, for: self.navigationController!.view, cache: false)
             
         })
         

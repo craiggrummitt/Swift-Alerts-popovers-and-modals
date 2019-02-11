@@ -29,79 +29,47 @@ class PresentModalViewController: UIViewController,UIPickerViewDataSource, UIPic
         presentationPicker.delegate = self
     }
     //MARK: pickerViewDelegate
-    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         if (pickerView == transitionPicker) {
             return pickerTransitionArray.count //UIModalTransitionStyle
         } else {
             return pickerPresentationArray.count //UIModalPresentationStyle
         }
     }
-    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         if (pickerView == transitionPicker) {
             return(pickerTransitionArray[row])
         } else {
             return(pickerPresentationArray[row])
         }
     }
+    
     //MARK: present
     
-    @IBAction func clickPresent(sender: AnyObject) {
+    @IBAction func clickPresent(sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        popupViewController = (sb.instantiateViewControllerWithIdentifier("popper") as! PopViewController)
+        popupViewController = (sb.instantiateViewController(withIdentifier: "popper") as! PopViewController)
         popupViewController!.delegate = self
         
-        //you'd think there'd be an easier way to hook up an enum to a picker...
-        
-        var trans:UIModalTransitionStyle
-        switch transitionPicker.selectedRowInComponent(0) {
-        case 0:
-            trans = .CoverVertical
-        case 1:
-            trans = .FlipHorizontal
-        case 2:
-            trans = .CrossDissolve
-        case 3:
-            trans = .PartialCurl
-        default:
-            trans = .CoverVertical
-        }
+        guard let trans = UIModalTransitionStyle(rawValue: transitionPicker.selectedRow(inComponent: 0))
+            else {return}
         popupViewController!.modalTransitionStyle = trans
         
-        
-        var pres:UIModalPresentationStyle
-        switch presentationPicker.selectedRowInComponent(0) {
-        case 0:
-            pres = .FullScreen
-        case 1:
-            pres = .PageSheet
-        case 2:
-            pres = .FormSheet
-        case 3:
-            pres = .CurrentContext
-        case 4:
-            pres = .Custom
-        case 5:
-            pres = .OverFullScreen
-        case 6:
-            pres = .OverCurrentContext
-        case 7:
-            pres = .Popover
-        default:
-            pres = .FullScreen
-        }
+        guard let pres:UIModalPresentationStyle = UIModalPresentationStyle(rawValue: presentationPicker.selectedRow(inComponent: 0))
+            else {return}
         popupViewController!.modalPresentationStyle = pres
         
-        if (pres == .FormSheet && trans == .PartialCurl) {
-            let alertController = UIAlertController(title: "Ooops!", message: "Sorry, that combination is not available!", preferredStyle:.Alert )
-            let callAction = UIAlertAction(title: "OK", style: .Default, handler: {
+        if (pres == .formSheet && trans == .partialCurl) {
+            let alertController = UIAlertController(title: "Ooops!", message: "Sorry, that combination is not available!", preferredStyle:.alert )
+            let callAction = UIAlertAction(title: "OK", style: .default, handler: {
                 action in
                 print("hit alert")
             })
             alertController.addAction(callAction)
-            presentViewController(alertController, animated: true, completion: nil)
+            present(alertController, animated: true, completion: nil)
             return
         }
         
@@ -109,11 +77,11 @@ class PresentModalViewController: UIViewController,UIPickerViewDataSource, UIPic
         popupViewController!.popoverPresentationController?.sourceView = self.presentButton.imageView
         popupViewController!.popoverPresentationController?.sourceRect = self.presentButton.bounds
         
-        self.presentViewController(popupViewController!, animated: true, completion: {})
+        self.present(popupViewController!, animated: true, completion: {})
     }
     
     func closePop(sender:AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: {})
+        self.dismiss(animated: true, completion: {})
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

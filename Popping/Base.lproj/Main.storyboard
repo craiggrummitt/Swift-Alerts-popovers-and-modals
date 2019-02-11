@@ -1,12 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -28,7 +27,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickAlertButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="Aks-Hl-lRo"/>
+                                    <action selector="clickAlertButtonWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="wMY-fU-fUT"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zbv-Ty-dnu">
@@ -37,7 +36,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickAlertButton:" destination="9pv-A4-QxB" eventType="touchUpInside" id="hWF-KG-bbU"/>
+                                    <action selector="clickAlertButtonWithSender:" destination="9pv-A4-QxB" eventType="touchUpInside" id="5gu-rb-Wp9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -89,7 +88,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickPresent:" destination="S7x-wV-0k0" eventType="touchUpInside" id="OcJ-Ia-B2g"/>
+                                    <action selector="clickPresentWithSender:" destination="S7x-wV-0k0" eventType="touchUpInside" id="lHS-Az-2vU"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -143,7 +142,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickPushButton:" destination="f2t-6E-Nql" eventType="touchUpInside" id="I8h-8X-OUX"/>
+                                    <action selector="clickPushButtonWithSender:" destination="f2t-6E-Nql" eventType="touchUpInside" id="89p-A4-HmH"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nh6-bk-o4v">
@@ -152,7 +151,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickPushChangeAnimation:" destination="f2t-6E-Nql" eventType="touchUpInside" id="icj-cP-KbQ"/>
+                                    <action selector="clickPushChangeAnimationWithSender:" destination="f2t-6E-Nql" eventType="touchUpInside" id="dLG-ap-Vw6"/>
                                 </connections>
                             </button>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KxI-Ze-VwG">
@@ -218,12 +217,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dBQ-eh-ucT">
-                                <rect key="frame" x="168" y="352.5" width="39" height="30"/>
+                                <rect key="frame" x="168" y="352" width="39" height="30"/>
                                 <state key="normal" title="Close">
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="clickCloseButton:" destination="3LB-8C-kxh" eventType="touchUpInside" id="hTu-K7-iHr"/>
+                                    <action selector="clickCloseButtonWithSender:" destination="3LB-8C-kxh" eventType="touchUpInside" id="68A-Ev-GjW"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Here goes content" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oas-10-u1w">
@@ -316,7 +315,7 @@
                                     <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="goPopover:" destination="BBf-ft-0Vp" eventType="touchUpInside" id="CKV-S3-D8T"/>
+                                    <action selector="goPopoverWithSender:" destination="BBf-ft-0Vp" eventType="touchUpInside" id="TCT-Yb-cIP"/>
                                 </connections>
                             </button>
                         </subviews>

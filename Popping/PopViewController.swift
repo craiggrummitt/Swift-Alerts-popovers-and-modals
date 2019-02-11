@@ -25,8 +25,8 @@ class PopViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    @IBAction func clickCloseButton(sender: AnyObject) {
-        self.delegate?.closePop(self)
+    @IBAction func clickCloseButton(sender: UIButton) {
+        self.delegate?.closePop(sender: self)
     }
 
     /*
